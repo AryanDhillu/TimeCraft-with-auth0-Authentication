@@ -26,7 +26,7 @@ const Homepage = () => {
           <div className="jumbotron jumbotron-fluid bg-primary text-white text-center mb-0">
             <div className="container">
               {isAuthenticated ? <h1 className="display-4 glow-text">Welcome {user.name}!!</h1> : <h1 className="display-4 glow-text">Welcome to TimeCraft</h1>}
-              <p className="lead">Craft your time, your day's design, with TimeCraft, your moments shine.</p>
+              <p className="lead glow-text">Craft your time, your day's design, with TimeCraft, your moments shine.</p>
               <Link to="/makeschedule" className="btn btn-lg btn-light mt-3 glow-button">Get Started</Link>
             </div>
           </div>
