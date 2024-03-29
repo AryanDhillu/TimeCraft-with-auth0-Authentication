@@ -15,7 +15,7 @@ const Navbar = ({ set_data ,check_data}) => {
   // };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-0">
       <div className="container">
         <Link className="navbar-brand" to="/">TimeCraft</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

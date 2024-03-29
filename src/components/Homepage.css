@@ -29,3 +29,55 @@
     padding: 10px 30px;
     font-size: 18px;
 }
+
+.time-div {
+    height: 305px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes rotateAnimation {
+    0% { transform: perspective(500px) rotateY(20deg); }
+    50% { transform: perspective(500px) rotateY(-20deg); }
+    100% { transform: perspective(500px) rotateY(20deg); }
+  }
+  
+  .time-text {
+    animation: rotateAnimation 4s infinite alternate ease-in-out; /* Add animation */
+  }
+  
+
+  
+  @keyframes glowAnimation1 {
+    0% { box-shadow: 0 0 10px #fff; }
+    50% { box-shadow: 0 0 20px #007bff; }
+    100% { box-shadow: 0 0 10px #fff; }
+  }
+  
+  .glow-button {
+    animation: glowAnimation1 3s infinite alternate ease-in-out; /* Add animation */
+  }
+  
+
+  @keyframes glowAnimation {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  
+  
+  .glow-text {
+    animation: glowAnimation 7s infinite alternate ease-in-out;
+  }
+  
+
+
+  
