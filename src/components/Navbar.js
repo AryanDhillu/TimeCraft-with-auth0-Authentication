@@ -4,15 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Homepage.css';
 import { useAuth0 } from "@auth0/auth0-react";
 
-const Navbar = ({ set_data }) => {
+const Navbar = ({ set_data ,check_data}) => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
 
-  // Callback function to log user id
-  const logUserId = () => {
-    if (isAuthenticated && user) {
-      console.log(user.sub); // Log the user ID
-    }
-  };
+
+  // const logUserId = () => {
+  //   if (isAuthenticated && user) {
+  //     console.log(user.sub); // Log the user ID
+  //   }
+  // };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -26,6 +26,12 @@ const Navbar = ({ set_data }) => {
             <li className="nav-item">
               <Link className="nav-link" to="/">Home</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/makeschedule" onClick={check_data}>MakeSchedule</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/viewschedule" onClick={set_data}>ViewSchedule</Link>
+            </li>
             {isAuthenticated ? (
               <li className="nav-item">
                 <Link className="nav-link" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</Link>
@@ -35,16 +41,10 @@ const Navbar = ({ set_data }) => {
                 <Link className="nav-link" onClick={() => { loginWithRedirect() }}>Login</Link>
               </li>
             )}
-            <li className="nav-item">
-              <Link className="nav-link" to="/makeschedule">Make Schedule</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/viewschedule" onClick={set_data}>View Schedule</Link>
-            </li>
           </ul>
         </div>
       </div>
-      {isAuthenticated && user && logUserId()}
+      {/* {isAuthenticated && user && logUserId()} */}
     </nav>
   );
 };

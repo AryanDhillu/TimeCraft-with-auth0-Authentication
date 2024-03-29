@@ -12,7 +12,7 @@ const Homepage = () => {
       <div className="jumbotron jumbotron-fluid bg-primary text-white text-center">
         <div className="container">
           {isAuthenticated ? <h1 className="display-4">Welcome {user.name}!!</h1> : <h1 className="display-4">Welcome to TimeCraft</h1>}
-          <p className="lead">"Craft your time, your day's design, with TimeCraft, your moments shine.".</p>
+          <p className="lead">Craft your time, your day's design, with TimeCraft, your moments shine.</p>
           <Link to="/makeschedule" className="btn btn-lg btn-light">Get Started</Link>
         </div>
       </div>
