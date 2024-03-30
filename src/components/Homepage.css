@@ -6,6 +6,10 @@
 }
 .navbar {
     background-color: #007bff;
+    /* display: flex;
+    flex-grow:1;
+     */
+
 }
 .navbar-brand, .navbar-nav .nav-link {
     color: #fff;
